@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import examples from '../data/examples.json';
 
 	const classColors = {
@@ -53,17 +52,24 @@
 
 	let showPinyin = false;
 	let inputValue = '';
-	let parse: any = {}; //examples.examples[0];
-
+	let parse: any = {};
 	let status = 0;
 	let tokens: Token[] = [];
 	let levels: number[][] = [];
 	let nodes: Node[] = [];
-	let dict: Dict = {}; //examples.dict[0];
+	let dict: Dict = {};
 	let selected = 0;
 	let tokenNum = -1;
 	let definition = 0;
 	let maxHeight = 0;
+
+	const getExample = () => {
+		const rand = Math.floor(Math.random() * examples.parse.length);
+		parse = examples.parse[rand];
+		dict = examples.dict[rand];
+		getData();
+		status = 2;
+	};
 
 	$: setTokenNum(selected);
 	const setTokenNum = (index: number) => {
@@ -98,8 +104,6 @@
 			levels.push([]);
 			level(parse, i);
 		}
-		searchDict();
-		status = 2;
 	};
 
 	const submit = () => {
@@ -115,15 +119,17 @@
 			.then((data) => {
 				parse = data;
 				getData();
+				searchDict();
+				status = 2;
 			});
 	};
 
 	const calc = (node: any): { height: number; left: number; right: number; content: string } => {
 		let res = { height: 0, left: 0, right: 0, content: '' };
-		let height = 0,
-			left = tokens.length,
-			right = 0,
-			content = '';
+		let height = 0;
+		let left = tokens.length;
+		let right = 0;
+		let content = '';
 		let index = nodes.length;
 		node.index = nodes.length;
 		nodes.push({
@@ -167,10 +173,6 @@
 			level(node.parse[i], height);
 		}
 	};
-
-	// onMount(() => {
-	//     getData();
-	// });
 
 	const getStyles = (tokenIdx: number, levelIdx: number, side: boolean): string => {
 		let styles = '';
@@ -258,9 +260,10 @@
 			/>
 			<button on:click={submit} class="text-2xl py-2 px-6 text-white w-32">submit</button>
 		</div>
-		<div class="flex space-x-2 mt-2 ml-4">
-			<input id="showPinyin" type="checkbox" class="scale-150" bind:checked={showPinyin} />
-			<label for="showPinyin" class="text-xl">show pinyin</label>
+		<div class="flex mt-2 items-center">
+			<button on:click={getExample} class="px-2 py-1">random example</button>
+			<input id="showPinyin" type="checkbox" class="scale-150 ml-4" bind:checked={showPinyin} />
+			<label for="showPinyin" class="text-xl ml-2">show pinyin</label>
 		</div>
 	</div>
 	<div class="mt-10">
@@ -306,9 +309,7 @@
 						<div class="bg-orange-400 p-2 rounded-lg text-lg">{nodes[selected].translation}</div>
 						{#if tokenNum != -1}
 							<div class="bg-orange-500 py-0.5 px-2 rounded-lg w-fit">class</div>
-							<div
-								class="bg-orange-400 p-2 rounded-lg text-lg {classColors[tokens[tokenNum].class]}"
-							>
+							<div class="p-2 rounded-lg text-lg {classColors[tokens[tokenNum].class]}">
 								{tokens[tokenNum].class}
 							</div>
 						{/if}

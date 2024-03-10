@@ -1,147 +1,90 @@
 {
-	"examples": [
+	"parse": [
 		{
-			"translation": "This is what the Chinese dissident group thought upon hearing the news of Navalny's death amidst grief and shock",
+			"translation": "The main raw material for producing solar panels, polysilicon, requires a lot of electrical energy.",
 			"parse": [
 				{
-					"translation": "This is",
+					"translation": "The main raw material for producing solar panels, polysilicon",
 					"parse": [
 						{
-							"content": "这",
-							"class": "pronoun",
-							"pinyin": "zhè",
-							"translation": "this"
-						},
-						{
-							"content": "就是",
-							"class": "verb",
-							"pinyin": "jiù shì",
-							"translation": "is"
-						}
-					]
-				},
-				{
-					"translation": "the Chinese dissident group",
-					"parse": [
-						{
-							"content": "中国",
-							"class": "noun",
-							"pinyin": "zhōng guó",
-							"translation": "Chinese"
-						},
-						{
-							"content": "异见者",
-							"class": "noun",
-							"pinyin": "yì jiàn zhě",
-							"translation": "dissidents"
-						},
-						{
-							"content": "群体",
-							"class": "noun",
-							"pinyin": "qún tǐ",
-							"translation": "group"
-						}
-					]
-				},
-				{
-					"translation": "upon hearing the news of Navalny's death amidst grief and shock",
-					"parse": [
-						{
-							"translation": "amidst grief and shock",
+							"translation": "producing solar panels",
 							"parse": [
 								{
-									"content": "在",
-									"class": "preposition",
-									"pinyin": "zài",
-									"translation": "in"
-								},
-								{
-									"translation": "grief and shock",
-									"parse": [
-										{
-											"content": "悲痛",
-											"class": "noun",
-											"pinyin": "bēi tòng",
-											"translation": "grief"
-										},
-										{
-											"content": "和",
-											"class": "conjunction",
-											"pinyin": "hé",
-											"translation": "and"
-										},
-										{
-											"content": "震惊",
-											"class": "noun",
-											"pinyin": "zhèn jīng",
-											"translation": "shock"
-										}
-									]
-								},
-								{
-									"content": "中",
-									"class": "noun",
-									"pinyin": "zhōng",
-									"translation": "among"
-								}
-							]
-						},
-						{
-							"translation": "seeing the news of Navalny's death",
-							"parse": [
-								{
-									"content": "看到",
+									"content": "生产",
+									"translation": "to produce",
 									"class": "verb",
-									"pinyin": "kàn dào",
-									"translation": "see"
+									"pinyin": "shēng chǎn"
 								},
 								{
-									"translation": "the news of Navalny's death",
+									"translation": "solar panels",
 									"parse": [
 										{
-											"content": "纳瓦尔尼",
+											"content": "太阳能",
+											"translation": "solar energy",
 											"class": "noun",
-											"pinyin": "Nà wǎ ěr ní",
-											"translation": "Navalny"
+											"pinyin": "tài yáng néng"
 										},
 										{
-											"content": "去世",
-											"class": "verb",
-											"pinyin": "qù shì",
-											"translation": "death"
-										},
-										{
-											"content": "消息",
+											"content": "电池板",
+											"translation": "battery panel",
 											"class": "noun",
-											"pinyin": "xiāo xī",
-											"translation": "news"
-										},
-										{
-											"content": "时",
-											"class": "noun",
-											"pinyin": "shí",
-											"translation": "when"
+											"pinyin": "diàn chí bǎn"
 										}
 									]
+								}
+							]
+						},
+						{
+							"translation": "the main raw material",
+							"parse": [
+								{
+									"content": "主要",
+									"translation": "main",
+									"class": "adjective",
+									"pinyin": "zhǔ yào"
+								},
+								{
+									"content": "原材料",
+									"translation": "raw material",
+									"class": "noun",
+									"pinyin": "yuán cái liào"
 								}
 							]
 						}
 					]
 				},
 				{
-					"translation": "thought",
+					"content": "多晶硅",
+					"translation": "polysilicon",
+					"class": "noun",
+					"pinyin": "duō jīng guī"
+				},
+				{
+					"translation": "requires a lot of electrical energy",
 					"parse": [
+						{ "content": "需要", "translation": "requires", "class": "verb", "pinyin": "xū yào" },
 						{
-							"content": "的",
-							"class": "particle",
-							"pinyin": "de",
-							"translation": "of"
-						},
-						{
-							"content": "想法",
-							"class": "noun",
-							"pinyin": "xiǎng fǎ",
-							"translation": "thought"
+							"translation": "a lot of electrical energy",
+							"parse": [
+								{
+									"content": "大量",
+									"translation": "a lot of",
+									"class": "quantifier",
+									"pinyin": "dà liàng"
+								},
+								{
+									"translation": "electrical energy",
+									"parse": [
+										{ "content": "的", "translation": "of", "class": "particle", "pinyin": "de" },
+										{
+											"content": "电能",
+											"translation": "electrical energy",
+											"class": "noun",
+											"pinyin": "diàn néng"
+										}
+									]
+								}
+							]
 						}
 					]
 				}
@@ -150,54 +93,23 @@
 	],
 	"dict": [
 		{
-			"这": [{ "english": "(pronoun) this; these", "pinyin": "zhe4" }],
-			"就是": [{ "english": "exactly; precisely", "pinyin": "jiu4 shi4" }],
-			"中国": [{ "english": "China", "pinyin": "Zhong1 guo2" }],
-			"异见者": [{ "english": "dissident", "pinyin": "yi4 jian4 zhe3" }],
-			"群体": [{ "english": "community", "pinyin": "qun2 ti3" }],
-			"在": [{ "english": "to exist; to be alive", "pinyin": "zai4" }],
-			"悲痛": [{ "english": "grieved", "pinyin": "bei1 tong4" }],
-			"和": [
-				{ "english": "old variant of 和[he2]", "pinyin": "he2" },
-				{ "english": "surname He", "pinyin": "He2" },
-				{
-					"english": "(joining two nouns) and; together with; with (Taiwan pr. [han4])",
-					"pinyin": "he2"
-				},
-				{
-					"english": "to compose a poem in reply (to sb's poem) using the same rhyme sequence",
-					"pinyin": "he4"
-				},
-				{ "english": "to complete a set in mahjong or playing cards", "pinyin": "hu2" },
-				{
-					"english": "to combine a powdery substance (flour, plaster etc) with water",
-					"pinyin": "huo2"
-				},
-				{ "english": "to mix (ingredients) together", "pinyin": "huo4" },
-				{ "english": "old variant of 和[he2]", "pinyin": "he2" }
+			"生产": [{ "english": "to produce; to manufacture", "pinyin": "sheng1 chan3" }],
+			"太阳能": [{ "english": "solar energy", "pinyin": "tai4 yang2 neng2" }],
+			"电池板": [],
+			"主要": [{ "english": "main; principal; major; primary", "pinyin": "zhu3 yao4" }],
+			"原材料": [{ "english": "raw and semifinished materials", "pinyin": "yuan2 cai2 liao4" }],
+			"多晶硅": [
+				{ "english": "polycrystalline silicon (used in electronics)", "pinyin": "duo1 jing1 gui1" }
 			],
-			"震惊": [{ "english": "to shock", "pinyin": "zhen4 jing1" }],
-			"中": [
-				{ "english": "(bound form) China; Chinese", "pinyin": "Zhong1" },
-				{ "english": "within; among; in", "pinyin": "zhong1" },
-				{ "english": "to hit (the mark)", "pinyin": "zhong4" }
-			],
-			"看到": [{ "english": "to see", "pinyin": "kan4 dao4" }],
-			"纳瓦尔尼": [],
-			"去世": [{ "english": "to pass away", "pinyin": "qu4 shi4" }],
-			"消息": [{ "english": "news", "pinyin": "xiao1 xi5" }],
-			"时": [
-				{ "english": "old variant of 時|时[shi2]", "pinyin": "shi2" },
-				{ "english": "surname Shi", "pinyin": "Shi2" },
-				{ "english": "o'clock", "pinyin": "shi2" }
-			],
+			"需要": [{ "english": "to need; to want; to demand; to require", "pinyin": "xu1 yao4" }],
+			"大量": [{ "english": "great amount", "pinyin": "da4 liang4" }],
 			"的": [
 				{ "english": "of; ~'s (possessive particle)", "pinyin": "de5" },
 				{ "english": "a taxi; a cab (abbr. for 的士[di1 shi4])", "pinyin": "di1" },
 				{ "english": "really and truly", "pinyin": "di2" },
 				{ "english": "(bound form) bull's-eye; target", "pinyin": "di4" }
 			],
-			"想法": [{ "english": "way of thinking; opinion; notion", "pinyin": "xiang3 fa3" }]
+			"电能": [{ "english": "electrical energy", "pinyin": "dian4 neng2" }]
 		}
 	]
 }
