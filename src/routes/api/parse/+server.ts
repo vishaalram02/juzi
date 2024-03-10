@@ -7,7 +7,7 @@ const PROMPT =
 	'I will provide you with a Chinese sentence and you will provide me with a JSON object representing the parse tree of the sentence. ' +
 	'Each node of the tree will represent a grammatical component of the sentence and the leaf nodes will represent individual words. The root node represents the entire sentence. ' +
 	'Each word at a leaf node should be standard words or idioms that I can find in a dictionary. ' +
-	'You can ignore all punctuation in the output like commas, quotations, and periods. ' +
+	'You can ignore all punctuation in the output like commas, quotations, and periods. Do not include them in the parse tree. ' +
 	"Every node will have a 'translation' field that contains the English translation of the component in the original context of the sentence. " +
 	"Every node that is not a leaf node will have a 'parse' field that contains a logical array of JSON objects representing largest grammatical subdivisions of the current component. " +
 	"The leaf nodes representing the indivdiual will not contain a parse field and will instead contain additional fields: a 'content' field with the original Chinese word from the sentence, a 'class' field containing the part of speech of the word in the original context of the chinese sentence, and a 'pinyin' field containing the pinyin pronounciation of the word with each syllable separated by a space. " +

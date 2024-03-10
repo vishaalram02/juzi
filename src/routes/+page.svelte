@@ -43,21 +43,15 @@
 		left: number;
 		right: number;
 	}
-	interface Dict {
-		[key: string]: Array<{
-			english: string;
-			pinyin: string;
-		}>;
-	}
 
 	let showPinyin = false;
 	let inputValue = '';
 	let parse: any = {};
+	let dict: any = {};
 	let status = 0;
 	let tokens: Token[] = [];
 	let levels: number[][] = [];
 	let nodes: Node[] = [];
-	let dict: Dict = {};
 	let selected = 0;
 	let tokenNum = -1;
 	let definition = 0;
@@ -200,6 +194,7 @@
 
 	const handleKeyDown = (e: KeyboardEvent) => {
 		if (e.key == 'ArrowUp') {
+			e.preventDefault();
 			for (let i = 0; i < levels.length; i++) {
 				for (let j = 0; j < levels[i].length; j++) {
 					if (levels[i][j] == selected) {
@@ -211,6 +206,7 @@
 				}
 			}
 		} else if (e.key == 'ArrowDown') {
+			e.preventDefault();
 			for (let i = levels.length - 1; i >= 0; i--) {
 				for (let j = 0; j < levels[i].length; j++) {
 					if (levels[i][j] == selected) {
@@ -222,6 +218,7 @@
 				}
 			}
 		} else if (e.key == 'ArrowLeft') {
+			e.preventDefault();
 			for (let i = 0; i < levels.length; i++) {
 				for (let j = 0; j < levels[i].length; j++) {
 					if (levels[i][j] == selected) {
@@ -233,6 +230,7 @@
 				}
 			}
 		} else if (e.key == 'ArrowRight') {
+			e.preventDefault();
 			for (let i = 0; i < levels.length; i++) {
 				for (let j = levels[i].length - 1; j >= 0; j--) {
 					if (levels[i][j] == selected) {
@@ -249,8 +247,13 @@
 
 <svelte:window on:keydown={handleKeyDown} />
 
-<div class="w-screen p-20">
+<div class="w-screen px-20 pb-20 pt-6">
 	<div class="mx-32">
+		<div class="flex items-center space-x-2">
+			<img class="w-8" src="/juzi.png" alt="juzi" />
+			<h1 class="text-3xl pt-1">Juzi</h1>
+		</div>
+
 		<div class="flex justify-center items-center mt-4 space-x-3">
 			<input
 				class="p-2 rounded-lg w-full text-2xl"
@@ -317,7 +320,7 @@
 				</div>
 
 				<div class="flex justify-center mt-4">
-					{#each tokens as token, tokenIdx}
+					{#each tokens as token, tokenIdx (token)}
 						<div class="flex flex-col">
 							{#if showPinyin}
 								<div class="text-center">{token.pinyin}</div>
@@ -341,7 +344,7 @@
 								</div>
 							</div>
 
-							{#each levels as level, levelIdx}
+							{#each levels as level, levelIdx (level)}
 								<div
 									role="button"
 									tabindex="0"

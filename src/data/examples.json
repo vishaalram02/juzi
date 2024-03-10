@@ -89,6 +89,134 @@
 					]
 				}
 			]
+		},
+		{
+			"translation": "There is almost no public information about the reconciliation talks, these talks were conducted privately, not through court.",
+			"parse": [
+				{
+					"translation": "There is almost no public information about the reconciliation talks",
+					"parse": [
+						{
+							"translation": "almost no",
+							"parse": [
+								{
+									"content": "几乎",
+									"class": "adverb",
+									"pinyin": "jī hū",
+									"translation": "almost"
+								},
+								{ "content": "没有", "class": "verb", "pinyin": "méi yǒu", "translation": "no" }
+							]
+						},
+						{
+							"translation": "any public information about the reconciliation talks",
+							"parse": [
+								{ "content": "任何", "class": "pronoun", "pinyin": "rèn hé", "translation": "any" },
+								{
+									"translation": "public information about the reconciliation talks",
+									"parse": [
+										{
+											"content": "关于",
+											"class": "preposition",
+											"pinyin": "guān yú",
+											"translation": "about"
+										},
+										{
+											"translation": "the reconciliation talks",
+											"parse": [
+												{
+													"content": "和解",
+													"class": "noun",
+													"pinyin": "hé jiě",
+													"translation": "reconciliation"
+												},
+												{
+													"content": "谈判",
+													"class": "noun",
+													"pinyin": "tán pàn",
+													"translation": "talks"
+												}
+											]
+										},
+										{ "content": "的", "class": "particle", "pinyin": "de", "translation": "of" },
+										{
+											"content": "公开",
+											"class": "adjective",
+											"pinyin": "gōng kāi",
+											"translation": "public"
+										},
+										{
+											"content": "信息",
+											"class": "noun",
+											"pinyin": "xìn xī",
+											"translation": "information"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"translation": "these talks were conducted privately, not through court",
+					"parse": [
+						{
+							"translation": "these talks",
+							"parse": [
+								{
+									"content": "这些",
+									"class": "pronoun",
+									"pinyin": "zhè xiē",
+									"translation": "these"
+								},
+								{ "content": "谈判", "class": "noun", "pinyin": "tán pàn", "translation": "talks" }
+							]
+						},
+						{ "content": "是", "class": "verb", "pinyin": "shì", "translation": "were" },
+						{
+							"translation": "conducted privately",
+							"parse": [
+								{
+									"content": "私下",
+									"class": "adverb",
+									"pinyin": "sī xià",
+									"translation": "privately"
+								},
+								{
+									"content": "进行",
+									"class": "verb",
+									"pinyin": "jìn xíng",
+									"translation": "conducted"
+								}
+							]
+						},
+						{ "content": "的", "class": "particle", "pinyin": "de", "translation": "," },
+						{
+							"translation": "not through court",
+							"parse": [
+								{ "content": "没有", "class": "verb", "pinyin": "méi yǒu", "translation": "not" },
+								{
+									"translation": "through court",
+									"parse": [
+										{
+											"content": "通过",
+											"class": "preposition",
+											"pinyin": "tōng guò",
+											"translation": "through"
+										},
+										{
+											"content": "法庭",
+											"class": "noun",
+											"pinyin": "fǎ tíng",
+											"translation": "court"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
 		}
 	],
 	"dict": [
@@ -110,6 +238,31 @@
 				{ "english": "(bound form) bull's-eye; target", "pinyin": "di4" }
 			],
 			"电能": [{ "english": "electrical energy", "pinyin": "dian4 neng2" }]
+		},
+		{
+			"几乎": [{ "english": "almost; nearly; practically", "pinyin": "ji1 hu1" }],
+			"没有": [{ "english": "haven't", "pinyin": "mei2 you3" }],
+			"任何": [{ "english": "any; whatever; whichever", "pinyin": "ren4 he2" }],
+			"关于": [{ "english": "pertaining to", "pinyin": "guan1 yu2" }],
+			"和解": [{ "english": "to settle (a dispute out of court)", "pinyin": "he2 jie3" }],
+			"谈判": [{ "english": "to negotiate", "pinyin": "tan2 pan4" }],
+			"的": [
+				{ "english": "of; ~'s (possessive particle)", "pinyin": "de5" },
+				{ "english": "a taxi; a cab (abbr. for 的士[di1 shi4])", "pinyin": "di1" },
+				{ "english": "really and truly", "pinyin": "di2" },
+				{ "english": "(bound form) bull's-eye; target", "pinyin": "di4" }
+			],
+			"公开": [{ "english": "open; overt; public", "pinyin": "gong1 kai1" }],
+			"信息": [{ "english": "information", "pinyin": "xin4 xi1" }],
+			"这些": [{ "english": "these", "pinyin": "zhe4 xie1" }],
+			"是": [
+				{ "english": "to be (followed by substantives only)", "pinyin": "shi4" },
+				{ "english": "variant of 是[shi4]", "pinyin": "shi4" }
+			],
+			"私下": [{ "english": "in private", "pinyin": "si1 xia4" }],
+			"进行": [{ "english": "to advance", "pinyin": "jin4 xing2" }],
+			"通过": [{ "english": "to pass through; to get through", "pinyin": "tong1 guo4" }],
+			"法庭": [{ "english": "court of law", "pinyin": "fa3 ting2" }]
 		}
 	]
 }
