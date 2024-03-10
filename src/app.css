@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
+	@font-face {
 		font-family: mabry;
 		src: url(/fonts/MabryPro-Regular.woff) format('woff');
 	}

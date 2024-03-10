@@ -1,0 +1,203 @@
+{
+	"examples": [
+		{
+			"translation": "This is what the Chinese dissident group thought upon hearing the news of Navalny's death amidst grief and shock",
+			"parse": [
+				{
+					"translation": "This is",
+					"parse": [
+						{
+							"content": "这",
+							"class": "pronoun",
+							"pinyin": "zhè",
+							"translation": "this"
+						},
+						{
+							"content": "就是",
+							"class": "verb",
+							"pinyin": "jiù shì",
+							"translation": "is"
+						}
+					]
+				},
+				{
+					"translation": "the Chinese dissident group",
+					"parse": [
+						{
+							"content": "中国",
+							"class": "noun",
+							"pinyin": "zhōng guó",
+							"translation": "Chinese"
+						},
+						{
+							"content": "异见者",
+							"class": "noun",
+							"pinyin": "yì jiàn zhě",
+							"translation": "dissidents"
+						},
+						{
+							"content": "群体",
+							"class": "noun",
+							"pinyin": "qún tǐ",
+							"translation": "group"
+						}
+					]
+				},
+				{
+					"translation": "upon hearing the news of Navalny's death amidst grief and shock",
+					"parse": [
+						{
+							"translation": "amidst grief and shock",
+							"parse": [
+								{
+									"content": "在",
+									"class": "preposition",
+									"pinyin": "zài",
+									"translation": "in"
+								},
+								{
+									"translation": "grief and shock",
+									"parse": [
+										{
+											"content": "悲痛",
+											"class": "noun",
+											"pinyin": "bēi tòng",
+											"translation": "grief"
+										},
+										{
+											"content": "和",
+											"class": "conjunction",
+											"pinyin": "hé",
+											"translation": "and"
+										},
+										{
+											"content": "震惊",
+											"class": "noun",
+											"pinyin": "zhèn jīng",
+											"translation": "shock"
+										}
+									]
+								},
+								{
+									"content": "中",
+									"class": "noun",
+									"pinyin": "zhōng",
+									"translation": "among"
+								}
+							]
+						},
+						{
+							"translation": "seeing the news of Navalny's death",
+							"parse": [
+								{
+									"content": "看到",
+									"class": "verb",
+									"pinyin": "kàn dào",
+									"translation": "see"
+								},
+								{
+									"translation": "the news of Navalny's death",
+									"parse": [
+										{
+											"content": "纳瓦尔尼",
+											"class": "noun",
+											"pinyin": "Nà wǎ ěr ní",
+											"translation": "Navalny"
+										},
+										{
+											"content": "去世",
+											"class": "verb",
+											"pinyin": "qù shì",
+											"translation": "death"
+										},
+										{
+											"content": "消息",
+											"class": "noun",
+											"pinyin": "xiāo xī",
+											"translation": "news"
+										},
+										{
+											"content": "时",
+											"class": "noun",
+											"pinyin": "shí",
+											"translation": "when"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"translation": "thought",
+					"parse": [
+						{
+							"content": "的",
+							"class": "particle",
+							"pinyin": "de",
+							"translation": "of"
+						},
+						{
+							"content": "想法",
+							"class": "noun",
+							"pinyin": "xiǎng fǎ",
+							"translation": "thought"
+						}
+					]
+				}
+			]
+		}
+	],
+	"dict": [
+		{
+			"这": [{ "english": "(pronoun) this; these", "pinyin": "zhe4" }],
+			"就是": [{ "english": "exactly; precisely", "pinyin": "jiu4 shi4" }],
+			"中国": [{ "english": "China", "pinyin": "Zhong1 guo2" }],
+			"异见者": [{ "english": "dissident", "pinyin": "yi4 jian4 zhe3" }],
+			"群体": [{ "english": "community", "pinyin": "qun2 ti3" }],
+			"在": [{ "english": "to exist; to be alive", "pinyin": "zai4" }],
+			"悲痛": [{ "english": "grieved", "pinyin": "bei1 tong4" }],
+			"和": [
+				{ "english": "old variant of 和[he2]", "pinyin": "he2" },
+				{ "english": "surname He", "pinyin": "He2" },
+				{
+					"english": "(joining two nouns) and; together with; with (Taiwan pr. [han4])",
+					"pinyin": "he2"
+				},
+				{
+					"english": "to compose a poem in reply (to sb's poem) using the same rhyme sequence",
+					"pinyin": "he4"
+				},
+				{ "english": "to complete a set in mahjong or playing cards", "pinyin": "hu2" },
+				{
+					"english": "to combine a powdery substance (flour, plaster etc) with water",
+					"pinyin": "huo2"
+				},
+				{ "english": "to mix (ingredients) together", "pinyin": "huo4" },
+				{ "english": "old variant of 和[he2]", "pinyin": "he2" }
+			],
+			"震惊": [{ "english": "to shock", "pinyin": "zhen4 jing1" }],
+			"中": [
+				{ "english": "(bound form) China; Chinese", "pinyin": "Zhong1" },
+				{ "english": "within; among; in", "pinyin": "zhong1" },
+				{ "english": "to hit (the mark)", "pinyin": "zhong4" }
+			],
+			"看到": [{ "english": "to see", "pinyin": "kan4 dao4" }],
+			"纳瓦尔尼": [],
+			"去世": [{ "english": "to pass away", "pinyin": "qu4 shi4" }],
+			"消息": [{ "english": "news", "pinyin": "xiao1 xi5" }],
+			"时": [
+				{ "english": "old variant of 時|时[shi2]", "pinyin": "shi2" },
+				{ "english": "surname Shi", "pinyin": "Shi2" },
+				{ "english": "o'clock", "pinyin": "shi2" }
+			],
+			"的": [
+				{ "english": "of; ~'s (possessive particle)", "pinyin": "de5" },
+				{ "english": "a taxi; a cab (abbr. for 的士[di1 shi4])", "pinyin": "di1" },
+				{ "english": "really and truly", "pinyin": "di2" },
+				{ "english": "(bound form) bull's-eye; target", "pinyin": "di4" }
+			],
+			"想法": [{ "english": "way of thinking; opinion; notion", "pinyin": "xiang3 fa3" }]
+		}
+	]
+}
