@@ -3,14 +3,14 @@
 
 	const classColors = {
 		noun: 'bg-blue-300',
-		pronoun: 'bg-yellow-300',
+		pronoun: 'bg-purple-300',
 		verb: 'bg-red-400',
 		adjective: 'bg-green-300',
 		adverb: 'bg-indigo-300',
-		preposition: 'bg-teal-300',
-		conjunction: 'bg-pink-300',
-		quantifier: 'bg-cyan-300',
-		particle: 'bg-purple-300',
+		preposition: 'bg-pink-300',
+		conjunction: 'bg-cyan-300',
+		quantifier: 'bg-lime-300',
+		particle: 'bg-yellow-300',
 		other: 'bg-gray-300'
 	};
 
@@ -67,6 +67,7 @@
 
 	$: setTokenNum(selected);
 	const setTokenNum = (index: number) => {
+		definition = 0;
 		for (let i = 0; i < tokens.length; i++) {
 			if (tokens[i].nodeIndex == index) {
 				tokenNum = i;
@@ -249,7 +250,13 @@
 
 <div class="w-screen px-20 pb-20 pt-6">
 	<div class="mx-32">
-		<div class="flex items-center space-x-2">
+		<div
+			role="button"
+			tabindex="0"
+			on:click={() => (status = 0)}
+			on:keydown={null}
+			class="flex items-center space-x-2 w-fit"
+		>
 			<img class="w-8" src="/juzi.png" alt="juzi" />
 			<h1 class="text-3xl pt-1">Juzi</h1>
 		</div>
@@ -286,7 +293,7 @@
 										on:click={() => {
 											definition = Math.max(definition - 1, 0);
 										}}
-										class="px-2 h-full">{'<'}</button
+										class="px-2 focus:outline-none">{'<'}</button
 									>
 									<div>{definition + 1 + '/' + dict[nodes[selected].content].length}</div>
 									<button
@@ -296,7 +303,7 @@
 												dict[nodes[selected].content].length - 1
 											);
 										}}
-										class="px-2">{'>'}</button
+										class="px-2 focus:outline-none">{'>'}</button
 									>
 								</div>
 							</div>
@@ -340,7 +347,7 @@
 									on:click={() => (selected = token.nodeIndex)}
 									class="focus:outline-none p-2 m-2 rounded-lg {classColors[token.class]}"
 								>
-									<div class="text-xl">{token.content}</div>
+									<div class="text-lg whitespace-nowrap">{token.content}</div>
 								</div>
 							</div>
 
