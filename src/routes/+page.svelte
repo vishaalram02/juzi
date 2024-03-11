@@ -255,8 +255,8 @@
 	<Info bind:showInfo />
 {/if}
 
-<div class="w-screen px-20 pb-20 pt-6">
-	<div class="mx-32">
+<div class="w-screen px-0 md:px-20 pb-20 pt-6">
+	<div class="mx-10 md:mx-32">
 		<div
 			role="button"
 			tabindex="0"
@@ -270,16 +270,18 @@
 
 		<div class="flex justify-center items-center mt-4 space-x-3">
 			<input
-				class="p-2 rounded-lg w-full text-2xl"
+				class="p-2 rounded-lg w-full text-md md:text-2xl"
 				type="text"
 				placeholder="enter any chinese sentence..."
 				bind:value={inputValue}
 			/>
-			<button on:click={submit} class="text-2xl py-2 px-6 text-white w-32">submit</button>
+			<button on:click={submit} class="text-md md:text-2xl py-2 px-6 w-32">submit</button>
 		</div>
 		<div class="flex mt-2 items-center">
 			<button on:click={getExample} class="px-2 py-1">random</button>
-			<button on:click={() => (showInfo = true)} class="px-2 py-1 ml-2">info ?</button>
+			<button on:click={() => (showInfo = true)} class="px-2 py-1 ml-2 whitespace-nowrap"
+				>info ?</button
+			>
 
 			<input id="showPinyin" type="checkbox" class="scale-150 ml-4" bind:checked={showPinyin} />
 			<label for="showPinyin" class="text-xl ml-2">show pinyin</label>
@@ -288,9 +290,9 @@
 	<div class="mt-10">
 		{#if status == 0}
 			<div
-				class="flex justify-center flex-col space-y-4 items-center bg-orange-300 rounded-lg w-8/12 mx-auto p-8"
+				class="flex justify-center flex-col space-y-4 items-center bg-orange-300 rounded-lg w-11/12 md:w-8/12 mx-auto p-8"
 			>
-				<div class="text-3xl text-center">
+				<div class="text-xl md:text-3xl text-center">
 					<div>Welcome to Juzi, your friendly Chinese sentence parser</div>
 					<div>Type in any sentence to begin!</div>
 				</div>
@@ -298,15 +300,15 @@
 				<img class="w-32 h-32" src="/juzi.png" alt="juzi" />
 			</div>
 		{:else if status == 1}
-			<img class="mx-auto animate-spin text-5xl rounded-full w-32" src="/juzi.png" alt="juzi" />
+			<img class="animate-spin text-5xl rounded-full w-32" src="/juzi.png" alt="juzi" />
 		{:else if status == 2}
-			<div class="center">
+			<div class="flex flex-col">
 				<div
-					class="flex space-x-2 mt-6 mx-auto min-h-60 bg-orange-300 p-4 rounded-lg w-8/12 {showPinyin
+					class="mx-auto flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 mt-6 min-h-60 bg-orange-300 p-4 rounded-lg w-11/12 md:w-8/12 {showPinyin
 						? 'mb-3'
 						: 'mb-8'}"
 				>
-					<div class="w-1/2 space-y-2">
+					<div class="w-full md:w-1/2 space-y-2">
 						<div class="bg-orange-500 py-0.5 px-2 rounded-lg w-fit">chinese</div>
 						<div class="bg-orange-400 p-2 rounded-lg text-lg">{nodes[selected].content}</div>
 						{#if dict[nodes[selected].content] && dict[nodes[selected].content].length != 0}
@@ -338,7 +340,7 @@
 							</div>
 						{/if}
 					</div>
-					<div class="w-1/2 space-y-2">
+					<div class="w-full md:w-1/2 space-y-2">
 						<div class="bg-orange-500 py-0.5 px-2 rounded-lg w-fit">english</div>
 						<div class="bg-orange-400 p-2 rounded-lg text-lg">{nodes[selected].translation}</div>
 						{#if tokenNum != -1}
@@ -350,11 +352,11 @@
 					</div>
 				</div>
 
-				<div class="flex justify-center">
+				<div class="flex mx-auto overflow-x-scroll px-2">
 					{#each tokens as token, tokenIdx (token)}
 						<div class="flex flex-col">
 							{#if showPinyin}
-								<div class="text-center text-sm">{token.pinyin}</div>
+								<div class="text-center text-sm whitespace-nowrap">{token.pinyin}</div>
 							{/if}
 							<div
 								class="mb-4
@@ -371,7 +373,9 @@
 									on:click={() => (selected = token.nodeIndex)}
 									class="focus:outline-none p-2 m-2 rounded-lg {classColors[token.class]}"
 								>
-									<div class="text-lg whitespace-nowrap text-center">{token.content}</div>
+									<div class="text-sm md:text-lg whitespace-nowrap text-center">
+										{token.content}
+									</div>
 								</div>
 							</div>
 
