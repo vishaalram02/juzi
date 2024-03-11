@@ -300,7 +300,7 @@
 				<img class="w-32 h-32" src="/juzi.png" alt="juzi" />
 			</div>
 		{:else if status == 1}
-			<img class="animate-spin text-5xl rounded-full w-32" src="/juzi.png" alt="juzi" />
+            <img class="mx-auto animate-spin text-5xl rounded-full w-32" src="/juzi.png" alt="juzi" />
 		{:else if status == 2}
 			<div class="flex flex-col">
 				<div
