@@ -217,6 +217,64 @@
 					]
 				}
 			]
+		},
+		{
+			"translation": "Due to the recent unpredictable changes in the weather, the farmers are very worried about the future crop yield.",
+			"parse": [
+				{
+					"translation": "Due to the recent unpredictable changes in the weather",
+					"parse": [
+						{ "content": "由于", "class": "preposition", "pinyin": "yóu yú" },
+						{
+							"translation": "the recent unpredictable changes in the weather",
+							"parse": [
+								{ "content": "最近", "class": "adjective", "pinyin": "zuì jìn" },
+								{
+									"translation": "unpredictable changes",
+									"parse": [
+										{ "content": "变化", "class": "noun", "pinyin": "biàn huà" },
+										{ "content": "无常", "class": "adjective", "pinyin": "wú cháng" }
+									]
+								},
+								{ "content": "天气", "class": "noun", "pinyin": "tiān qì" }
+							]
+						}
+					]
+				},
+				{
+					"translation": "the farmers are very worried about the future crop yield.",
+					"parse": [
+						{ "content": "农民们", "class": "noun", "pinyin": "nóng mín men" },
+						{
+							"translation": "very worried",
+							"parse": [
+								{ "content": "感到", "class": "verb", "pinyin": "gǎn dào" },
+								{ "content": "非常", "class": "adverb", "pinyin": "fēi cháng" },
+								{ "content": "担忧", "class": "verb", "pinyin": "dān yōu" }
+							]
+						},
+						{
+							"translation": "about the future crop yield.",
+							"parse": [
+								{ "content": "对", "class": "preposition", "pinyin": "duì" },
+								{
+									"translation": "future crop yield",
+									"parse": [
+										{ "content": "未来", "class": "noun", "pinyin": "wèi lái" },
+										{
+											"translation": "crop yield",
+											"parse": [
+												{ "content": "作物", "class": "noun", "pinyin": "zuò wù" },
+												{ "content": "产量", "class": "noun", "pinyin": "chǎn liàng" }
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
 		}
 	],
 	"dict": [
@@ -263,6 +321,21 @@
 			"进行": [{ "english": "to advance", "pinyin": "jin4 xing2" }],
 			"通过": [{ "english": "to pass through; to get through", "pinyin": "tong1 guo4" }],
 			"法庭": [{ "english": "court of law", "pinyin": "fa3 ting2" }]
+		},
+		{
+			"由于": [{ "english": "due to", "pinyin": "you2 yu2" }],
+			"最近": [{ "english": "recently", "pinyin": "zui4 jin4" }],
+			"变化": [{ "english": "(intransitive) to change; to vary", "pinyin": "bian4 hua4" }],
+			"无常": [{ "english": "variable", "pinyin": "wu2 chang2" }],
+			"天气": [{ "english": "weather", "pinyin": "tian1 qi4" }],
+			"农民们": [],
+			"感到": [{ "english": "to feel; to sense; to perceive", "pinyin": "gan3 dao4" }],
+			"非常": [{ "english": "very; really", "pinyin": "fei1 chang2" }],
+			"担忧": [{ "english": "to worry", "pinyin": "dan1 you1" }],
+			"对": [{ "english": "right; correct", "pinyin": "dui4" }],
+			"未来": [{ "english": "future", "pinyin": "wei4 lai2" }],
+			"作物": [{ "english": "crop", "pinyin": "zuo4 wu4" }],
+			"产量": [{ "english": "output", "pinyin": "chan3 liang4" }]
 		}
 	]
 }
