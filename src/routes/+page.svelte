@@ -57,10 +57,16 @@
 	let selected = 0;
 	let tokenNum = -1;
 	let definition = 0;
+	let example = 0;
 	let maxHeight = 0;
 
 	const getExample = () => {
-		const rand = Math.floor(Math.random() * examples.parse.length);
+		let rand;
+		do {
+			rand = Math.floor(Math.random() * examples.parse.length);
+		} while (rand == example);
+
+		example = rand;
 		parse = examples.parse[rand];
 		dict = examples.dict[rand];
 		getData();

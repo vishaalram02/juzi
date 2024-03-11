@@ -242,33 +242,204 @@
 					]
 				},
 				{
-					"translation": "the farmers are very worried about the future crop yield.",
+					"translation": "Farmers feel very worried about future crop yields due to the recent unpredictable weather",
 					"parse": [
-						{ "content": "农民们", "class": "noun", "pinyin": "nóng mín men" },
 						{
-							"translation": "very worried",
+							"translation": "due to the recent unpredictable weather",
 							"parse": [
-								{ "content": "感到", "class": "verb", "pinyin": "gǎn dào" },
-								{ "content": "非常", "class": "adverb", "pinyin": "fēi cháng" },
-								{ "content": "担忧", "class": "verb", "pinyin": "dān yōu" }
-							]
-						},
-						{
-							"translation": "about the future crop yield.",
-							"parse": [
-								{ "content": "对", "class": "preposition", "pinyin": "duì" },
 								{
-									"translation": "future crop yield",
+									"content": "由于",
+									"translation": "due to",
+									"class": "preposition",
+									"pinyin": "yóu yú"
+								},
+								{
+									"translation": "recent unpredictable weather",
 									"parse": [
-										{ "content": "未来", "class": "noun", "pinyin": "wèi lái" },
 										{
-											"translation": "crop yield",
+											"content": "最近",
+											"translation": "recent",
+											"class": "adjective",
+											"pinyin": "zuì jìn"
+										},
+										{
+											"translation": "unpredictable weather",
 											"parse": [
-												{ "content": "作物", "class": "noun", "pinyin": "zuò wù" },
-												{ "content": "产量", "class": "noun", "pinyin": "chǎn liàng" }
+												{
+													"content": "变化无常",
+													"translation": "unpredictable",
+													"class": "adjective",
+													"pinyin": "biàn huà wú cháng"
+												},
+												{
+													"content": "天气",
+													"translation": "weather",
+													"class": "noun",
+													"pinyin": "tiān qì"
+												}
 											]
 										}
 									]
+								}
+							]
+						},
+						{
+							"translation": "farmers feel very worried about future crop yields",
+							"parse": [
+								{
+									"content": "农民们",
+									"translation": "farmers",
+									"class": "noun",
+									"pinyin": "nóng mín men"
+								},
+								{
+									"translation": "feel very worried about future crop yields",
+									"parse": [
+										{
+											"content": "感到",
+											"translation": "feel",
+											"class": "verb",
+											"pinyin": "gǎn dào"
+										},
+										{
+											"translation": "very worried about future crop yields",
+											"parse": [
+												{
+													"content": "非常",
+													"translation": "very",
+													"class": "adverb",
+													"pinyin": "fēi cháng"
+												},
+												{
+													"translation": "worried about future crop yields",
+													"parse": [
+														{
+															"content": "担忧",
+															"translation": "worried about",
+															"class": "verb",
+															"pinyin": "dān yōu"
+														},
+														{
+															"translation": "future crop yields",
+															"parse": [
+																{
+																	"content": "对",
+																	"translation": "about",
+																	"class": "preposition",
+																	"pinyin": "duì"
+																},
+																{
+																	"translation": "future crop yields",
+																	"parse": [
+																		{
+																			"content": "未来",
+																			"translation": "future",
+																			"class": "noun",
+																			"pinyin": "wèi lái"
+																		},
+																		{
+																			"content": "作物",
+																			"translation": "crop",
+																			"class": "noun",
+																			"pinyin": "zuò wù"
+																		},
+																		{
+																			"content": "产量",
+																			"translation": "yields",
+																			"class": "noun",
+																			"pinyin": "chǎn liàng"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"translation": "I like to go for a walk by the sea at weekends, listening to the sound of the waves.",
+			"parse": [
+				{
+					"translation": "I like to go for a walk by the sea at weekends",
+					"parse": [
+						{ "translation": "I", "content": "我", "class": "pronoun", "pinyin": "wǒ" },
+						{ "translation": "like", "content": "喜欢", "class": "verb", "pinyin": "xǐ huān" },
+						{
+							"translation": "at weekends go for a walk by the sea",
+							"parse": [
+								{
+									"translation": "at weekends",
+									"parse": [
+										{
+											"translation": "at",
+											"content": "在",
+											"class": "preposition",
+											"pinyin": "zài"
+										},
+										{
+											"translation": "weekends",
+											"parse": [
+												{
+													"translation": "week",
+													"content": "周",
+													"class": "noun",
+													"pinyin": "zhōu"
+												},
+												{ "translation": "end", "content": "末", "class": "noun", "pinyin": "mò" }
+											]
+										},
+										{ "translation": "'s", "content": "的", "class": "particle", "pinyin": "de" },
+										{
+											"translation": "time",
+											"content": "时候",
+											"class": "noun",
+											"pinyin": "shí hòu"
+										}
+									]
+								},
+								{ "translation": "go to", "content": "去", "class": "verb", "pinyin": "qù" },
+								{
+									"translation": "seaside",
+									"parse": [
+										{ "translation": "sea", "content": "海", "class": "noun", "pinyin": "hǎi" },
+										{ "translation": "side", "content": "边", "class": "noun", "pinyin": "biān" }
+									]
+								},
+								{ "translation": "walk", "content": "散步", "class": "verb", "pinyin": "sàn bù" }
+							]
+						}
+					]
+				},
+				{
+					"translation": "listening to the sound of the waves",
+					"parse": [
+						{
+							"translation": "listening",
+							"parse": [
+								{ "translation": "listen", "content": "听", "class": "verb", "pinyin": "tīng" },
+								{ "translation": "listen", "content": "听", "class": "verb", "pinyin": "tīng" }
+							]
+						},
+						{ "translation": "to", "content": "的", "class": "particle", "pinyin": "de" },
+						{
+							"translation": "the sound of the waves",
+							"parse": [
+								{ "translation": "wave", "content": "海浪", "class": "noun", "pinyin": "hǎi làng" },
+								{ "translation": "'s", "content": "的", "class": "particle", "pinyin": "de" },
+								{
+									"translation": "sound",
+									"content": "声音",
+									"class": "noun",
+									"pinyin": "shēng yīn"
 								}
 							]
 						}
@@ -325,8 +496,7 @@
 		{
 			"由于": [{ "english": "due to", "pinyin": "you2 yu2" }],
 			"最近": [{ "english": "recently", "pinyin": "zui4 jin4" }],
-			"变化": [{ "english": "(intransitive) to change; to vary", "pinyin": "bian4 hua4" }],
-			"无常": [{ "english": "variable", "pinyin": "wu2 chang2" }],
+			"变化无常": [{ "english": "(idiom) changeable; fickle", "pinyin": "bian4 hua4 wu2 chang2" }],
 			"天气": [{ "english": "weather", "pinyin": "tian1 qi4" }],
 			"农民们": [],
 			"感到": [{ "english": "to feel; to sense; to perceive", "pinyin": "gan3 dao4" }],
@@ -336,6 +506,40 @@
 			"未来": [{ "english": "future", "pinyin": "wei4 lai2" }],
 			"作物": [{ "english": "crop", "pinyin": "zuo4 wu4" }],
 			"产量": [{ "english": "output", "pinyin": "chan3 liang4" }]
+		},
+		{
+			"我": [{ "english": "I; me; my", "pinyin": "wo3" }],
+			"喜欢": [{ "english": "to like; to be fond of", "pinyin": "xi3 huan5" }],
+			"在": [{ "english": "to exist; to be alive", "pinyin": "zai4" }],
+			"周": [
+				{ "english": "surname Zhou", "pinyin": "Zhou1" },
+				{ "english": "to make a circuit", "pinyin": "zhou1" },
+				{ "english": "week", "pinyin": "zhou1" }
+			],
+			"末": [{ "english": "tip", "pinyin": "mo4" }],
+			"的": [
+				{ "english": "of; ~'s (possessive particle)", "pinyin": "de5" },
+				{ "english": "a taxi; a cab (abbr. for 的士[di1 shi4])", "pinyin": "di1" },
+				{ "english": "really and truly", "pinyin": "di2" },
+				{ "english": "(bound form) bull's-eye; target", "pinyin": "di4" }
+			],
+			"时候": [{ "english": "time", "pinyin": "shi2 hou5" }],
+			"去": [{ "english": "to go", "pinyin": "qu4" }],
+			"海": [
+				{ "english": "surname Hai", "pinyin": "Hai3" },
+				{ "english": "ocean", "pinyin": "hai3" }
+			],
+			"边": [
+				{ "english": "side", "pinyin": "bian1" },
+				{ "english": "suffix of a noun of locality", "pinyin": "bian5" }
+			],
+			"散步": [{ "english": "to take a walk; to go for a walk", "pinyin": "san4 bu4" }],
+			"听": [
+				{ "english": "smile (archaic)", "pinyin": "yin3" },
+				{ "english": "to listen to; to hear", "pinyin": "ting1" }
+			],
+			"海浪": [{ "english": "sea wave", "pinyin": "hai3 lang4" }],
+			"声音": [{ "english": "voice", "pinyin": "sheng1 yin1" }]
 		}
 	]
 }
