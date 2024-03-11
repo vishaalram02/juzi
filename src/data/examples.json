@@ -219,137 +219,112 @@
 			]
 		},
 		{
-			"translation": "Due to the recent unpredictable changes in the weather, the farmers are very worried about the future crop yield.",
+			"translation": "Farmers feel very worried about future crop yields due to the recent unpredictable weather",
 			"parse": [
 				{
-					"translation": "Due to the recent unpredictable changes in the weather",
+					"translation": "due to the recent unpredictable weather",
 					"parse": [
-						{ "content": "由于", "class": "preposition", "pinyin": "yóu yú" },
 						{
-							"translation": "the recent unpredictable changes in the weather",
+							"content": "由于",
+							"translation": "due to",
+							"class": "preposition",
+							"pinyin": "yóu yú"
+						},
+						{
+							"translation": "recent unpredictable weather",
 							"parse": [
-								{ "content": "最近", "class": "adjective", "pinyin": "zuì jìn" },
 								{
-									"translation": "unpredictable changes",
-									"parse": [
-										{ "content": "变化", "class": "noun", "pinyin": "biàn huà" },
-										{ "content": "无常", "class": "adjective", "pinyin": "wú cháng" }
-									]
+									"content": "最近",
+									"translation": "recent",
+									"class": "adjective",
+									"pinyin": "zuì jìn"
 								},
-								{ "content": "天气", "class": "noun", "pinyin": "tiān qì" }
+								{
+									"translation": "unpredictable weather",
+									"parse": [
+										{
+											"content": "变化无常",
+											"translation": "unpredictable",
+											"class": "adjective",
+											"pinyin": "biàn huà wú cháng"
+										},
+										{
+											"content": "天气",
+											"translation": "weather",
+											"class": "noun",
+											"pinyin": "tiān qì"
+										}
+									]
+								}
 							]
 						}
 					]
 				},
 				{
-					"translation": "Farmers feel very worried about future crop yields due to the recent unpredictable weather",
+					"translation": "farmers feel very worried about future crop yields",
 					"parse": [
 						{
-							"translation": "due to the recent unpredictable weather",
-							"parse": [
-								{
-									"content": "由于",
-									"translation": "due to",
-									"class": "preposition",
-									"pinyin": "yóu yú"
-								},
-								{
-									"translation": "recent unpredictable weather",
-									"parse": [
-										{
-											"content": "最近",
-											"translation": "recent",
-											"class": "adjective",
-											"pinyin": "zuì jìn"
-										},
-										{
-											"translation": "unpredictable weather",
-											"parse": [
-												{
-													"content": "变化无常",
-													"translation": "unpredictable",
-													"class": "adjective",
-													"pinyin": "biàn huà wú cháng"
-												},
-												{
-													"content": "天气",
-													"translation": "weather",
-													"class": "noun",
-													"pinyin": "tiān qì"
-												}
-											]
-										}
-									]
-								}
-							]
+							"content": "农民们",
+							"translation": "farmers",
+							"class": "noun",
+							"pinyin": "nóng mín men"
 						},
 						{
-							"translation": "farmers feel very worried about future crop yields",
+							"translation": "feel very worried about future crop yields",
 							"parse": [
 								{
-									"content": "农民们",
-									"translation": "farmers",
-									"class": "noun",
-									"pinyin": "nóng mín men"
+									"content": "感到",
+									"translation": "feel",
+									"class": "verb",
+									"pinyin": "gǎn dào"
 								},
 								{
-									"translation": "feel very worried about future crop yields",
+									"translation": "very worried about future crop yields",
 									"parse": [
 										{
-											"content": "感到",
-											"translation": "feel",
-											"class": "verb",
-											"pinyin": "gǎn dào"
+											"content": "非常",
+											"translation": "very",
+											"class": "adverb",
+											"pinyin": "fēi cháng"
 										},
 										{
-											"translation": "very worried about future crop yields",
+											"translation": "worried about future crop yields",
 											"parse": [
 												{
-													"content": "非常",
-													"translation": "very",
-													"class": "adverb",
-													"pinyin": "fēi cháng"
+													"content": "担忧",
+													"translation": "worried about",
+													"class": "verb",
+													"pinyin": "dān yōu"
 												},
 												{
-													"translation": "worried about future crop yields",
+													"translation": "future crop yields",
 													"parse": [
 														{
-															"content": "担忧",
-															"translation": "worried about",
-															"class": "verb",
-															"pinyin": "dān yōu"
+															"content": "对",
+															"translation": "about",
+															"class": "preposition",
+															"pinyin": "duì"
 														},
 														{
 															"translation": "future crop yields",
 															"parse": [
 																{
-																	"content": "对",
-																	"translation": "about",
-																	"class": "preposition",
-																	"pinyin": "duì"
+																	"content": "未来",
+																	"translation": "future",
+																	"class": "noun",
+																	"pinyin": "wèi lái"
 																},
 																{
-																	"translation": "future crop yields",
-																	"parse": [
-																		{
-																			"content": "未来",
-																			"translation": "future",
-																			"class": "noun",
-																			"pinyin": "wèi lái"
-																		},
-																		{
-																			"content": "作物",
-																			"translation": "crop",
-																			"class": "noun",
-																			"pinyin": "zuò wù"
-																		},
-																		{
-																			"content": "产量",
-																			"translation": "yields",
-																			"class": "noun",
-																			"pinyin": "chǎn liàng"
-																		}
-																	]
+																	"content": "作物",
+																	"translation": "crop",
+																	"class": "noun",
+																	"pinyin": "zuò wù"
+																},
+																{
+																	"content": "产量",
+																	"translation": "yields",
+																	"class": "noun",
+																	"pinyin": "chǎn liàng"
 																}
 															]
 														}
