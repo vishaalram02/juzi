@@ -421,6 +421,144 @@
 					]
 				}
 			]
+		},
+		{
+			"translation": "In the gentle morning light, I gaze into the distance from the ancient Great Wall with awe in my heart",
+			"parse": [
+				{
+					"translation": "In the gentle morning light",
+					"parse": [
+						{
+							"translation": "gentle morning light",
+							"parse": [
+								{
+									"content": "晨光",
+									"translation": "morning light",
+									"class": "noun",
+									"pinyin": "chén guāng"
+								},
+								{
+									"content": "熹微",
+									"translation": "gentle",
+									"class": "adjective",
+									"pinyin": "xī wēi"
+								}
+							]
+						},
+						{ "content": "我", "translation": "I", "class": "pronoun", "pinyin": "wǒ" }
+					]
+				},
+				{
+					"translation": "gaze into the distance from the ancient Great Wall",
+					"parse": [
+						{
+							"translation": "from the ancient Great Wall",
+							"parse": [
+								{ "content": "在", "translation": "from", "class": "preposition", "pinyin": "zài" },
+								{
+									"translation": "the ancient Great Wall",
+									"parse": [
+										{
+											"content": "古老",
+											"translation": "ancient",
+											"class": "adjective",
+											"pinyin": "gǔ lǎo"
+										},
+										{ "content": "的", "translation": "of", "class": "particle", "pinyin": "de" },
+										{
+											"content": "长城",
+											"translation": "Great Wall",
+											"class": "noun",
+											"pinyin": "cháng chéng"
+										}
+									]
+								}
+							]
+						},
+						{
+							"content": "遥望",
+							"translation": "gaze into the distance",
+							"class": "verb",
+							"pinyin": "yáo wàng"
+						},
+						{
+							"content": "远方",
+							"translation": "the distance",
+							"class": "noun",
+							"pinyin": "yuǎn fāng"
+						}
+					]
+				},
+				{
+					"translation": "with awe in my heart",
+					"parse": [
+						{ "content": "心", "translation": "heart", "class": "noun", "pinyin": "xīn" },
+						{ "content": "怀", "translation": "with", "class": "preposition", "pinyin": "huái" },
+						{ "content": "敬畏", "translation": "awe", "class": "noun", "pinyin": "jìng wèi" }
+					]
+				}
+			]
+		},
+		{
+			"translation": "Life is like an inn where we are merely passing by. I am also a traveler. Time waits for no one. Cherish every moment now.",
+			"parse": [
+				{
+					"translation": "Life is like an inn where we are merely passing by.",
+					"parse": [
+						{ "content": "人生", "class": "noun", "pinyin": "rén shēng", "translation": "Life" },
+						{ "content": "如", "class": "preposition", "pinyin": "rú", "translation": "is like" },
+						{ "content": "逆旅", "class": "noun", "pinyin": "nì lǚ", "translation": "an inn" },
+						{
+							"translation": "where we are merely passing by.",
+							"parse": [
+								{ "content": "我", "class": "pronoun", "pinyin": "wǒ", "translation": "I" },
+								{ "content": "亦", "class": "adverb", "pinyin": "yì", "translation": "also" },
+								{ "content": "是", "class": "verb", "pinyin": "shì", "translation": "am" },
+								{
+									"content": "行人",
+									"class": "noun",
+									"pinyin": "xíng rén",
+									"translation": "passerby"
+								}
+							]
+						}
+					]
+				},
+				{
+					"translation": "Time waits for no one.",
+					"parse": [
+						{ "content": "岁月", "class": "noun", "pinyin": "suì yuè", "translation": "Time" },
+						{
+							"translation": "waits for no one.",
+							"parse": [
+								{ "content": "不", "class": "adverb", "pinyin": "bù", "translation": "does not" },
+								{ "content": "待", "class": "verb", "pinyin": "dài", "translation": "wait for" },
+								{ "content": "人", "class": "noun", "pinyin": "rén", "translation": "one" }
+							]
+						}
+					]
+				},
+				{
+					"translation": "Cherish every moment now.",
+					"parse": [
+						{ "content": "珍惜", "class": "verb", "pinyin": "zhēn xī", "translation": "Cherish" },
+						{
+							"translation": "every moment now.",
+							"parse": [
+								{
+									"content": "当下",
+									"class": "adverb",
+									"pinyin": "dāng xià",
+									"translation": "now"
+								},
+								{ "content": "每", "class": "quantifier", "pinyin": "měi", "translation": "every" },
+								{ "content": "一", "class": "quantifier", "pinyin": "yī", "translation": "one" },
+								{ "content": "刻", "class": "noun", "pinyin": "kè", "translation": "moment" }
+							]
+						}
+					]
+				}
+			]
 		}
 	],
 	"dict": [
@@ -515,6 +653,52 @@
 			],
 			"海浪": [{ "english": "sea wave", "pinyin": "hai3 lang4" }],
 			"声音": [{ "english": "voice", "pinyin": "sheng1 yin1" }]
+		},
+		{
+			"晨光": [],
+			"熹微": [],
+			"我": [{ "english": "I; me; my", "pinyin": "wo3" }],
+			"在": [{ "english": "to exist; to be alive", "pinyin": "zai4" }],
+			"古老": [{ "english": "ancient", "pinyin": "gu3 lao3" }],
+			"的": [
+				{ "english": "of; ~'s (possessive particle)", "pinyin": "de5" },
+				{ "english": "a taxi; a cab (abbr. for 的士[di1 shi4])", "pinyin": "di1" },
+				{ "english": "really and truly", "pinyin": "di2" },
+				{ "english": "(bound form) bull's-eye; target", "pinyin": "di4" }
+			],
+			"长城": [{ "english": "the Great Wall", "pinyin": "Chang2 cheng2" }],
+			"遥望": [{ "english": "to look into the distance", "pinyin": "yao2 wang4" }],
+			"远方": [{ "english": "far away", "pinyin": "yuan3 fang1" }],
+			"心": [{ "english": "heart", "pinyin": "xin1" }],
+			"怀": [
+				{ "english": "surname Huai", "pinyin": "Huai2" },
+				{ "english": "bosom", "pinyin": "huai2" }
+			],
+			"敬畏": [{ "english": "to revere", "pinyin": "jing4 wei4" }]
+		},
+		{
+			"人生": [{ "english": "life (one's time on earth)", "pinyin": "ren2 sheng1" }],
+			"如": [{ "english": "as", "pinyin": "ru2" }],
+			"逆旅": [{ "english": "guest-house", "pinyin": "ni4 lu:3" }],
+			"我": [{ "english": "I; me; my", "pinyin": "wo3" }],
+			"亦": [{ "english": "also", "pinyin": "yi4" }],
+			"是": [
+				{ "english": "to be (followed by substantives only)", "pinyin": "shi4" },
+				{ "english": "variant of 是[shi4]", "pinyin": "shi4" }
+			],
+			"行人": [{ "english": "pedestrian", "pinyin": "xing2 ren2" }],
+			"岁月": [{ "english": "years", "pinyin": "sui4 yue4" }],
+			"不": [{ "english": "no; not so", "pinyin": "bu4" }],
+			"待": [
+				{ "english": "to stay", "pinyin": "dai1" },
+				{ "english": "to wait", "pinyin": "dai4" }
+			],
+			"人": [{ "english": "person; people", "pinyin": "ren2" }],
+			"珍惜": [{ "english": "to treasure", "pinyin": "zhen1 xi1" }],
+			"当下": [{ "english": "immediately", "pinyin": "dang1 xia4" }],
+			"每": [{ "english": "each", "pinyin": "mei3" }],
+			"一": [{ "english": "one", "pinyin": "yi1" }],
+			"刻": [{ "english": "quarter (hour)", "pinyin": "ke4" }]
 		}
 	]
 }

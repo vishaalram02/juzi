@@ -59,6 +59,7 @@
 	let definition = 0;
 	let example = 0;
 	let maxHeight = 0;
+	let error = 'Oops something went wrong!';
 
 	const getExample = () => {
 		let rand;
@@ -70,7 +71,7 @@
 		parse = examples.parse[rand];
 		dict = examples.dict[rand];
 		getData();
-		status = 2;
+		status = 3;
 	};
 
 	$: setTokenNum(selected);
@@ -118,12 +119,20 @@
 			},
 			body: JSON.stringify({ input: inputValue })
 		})
-			.then((res) => res.json())
+			.then((res) => {
+				return res.json();
+			})
 			.then((data) => {
+				if (data.error) {
+					status = 2;
+					error = data.error;
+					return;
+				}
+
 				parse = data;
 				getData();
 				searchDict();
-				status = 2;
+				status = 3;
 			});
 	};
 
@@ -308,6 +317,17 @@
 		{:else if status == 1}
 			<img class="mx-auto animate-spin text-5xl rounded-full w-32" src="/juzi.png" alt="juzi" />
 		{:else if status == 2}
+			<div
+				class="flex justify-center flex-col space-y-4 items-center bg-orange-300 rounded-lg w-11/12 md:w-8/12 mx-auto p-8"
+			>
+				<div class="text-xl md:text-3xl text-center">
+					<div>whoopsies</div>
+					<div>{error}</div>
+				</div>
+
+				<img class="w-32 h-32" src="/juzi.png" alt="juzi" />
+			</div>
+		{:else if status == 3}
 			<div class="flex flex-col">
 				<div
 					class="mx-auto flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 mt-6 min-h-60 bg-orange-300 p-4 rounded-lg w-11/12 md:w-8/12 {showPinyin
