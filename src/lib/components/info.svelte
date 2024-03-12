@@ -23,8 +23,8 @@
 				<div>
 					<div>
 						Juzi is a sentence parser designed to help you break down Chinese sentences into
-						grammatical components. Each component will have it's own translation in context you
-						help you understand the overall meaning!
+						grammatical components. Each component in the syntax tree presents its own meaning in
+						context to help you understand the overall meaning and structure of the sentence.
 					</div>
 				</div>
 				<div class="mt-4">

@@ -1,38 +1,44 @@
-# create-svelte
+<div align="center">
+    <h1 style="font-size: 80px;">juzi 
+        <img width=80 style="margin-bottom: -20px;" src="./static/juzi.png"/>
+    </h1>
+    <div style="font-size: 20px; margin-bottom: 20px;">
+	    <a href="#overview">Overview 😀</a>
+        <span> • </span>
+    	<a href="#setup">Setup 💻</a>
+    </div> 
+    <img style="border-radius:20px" src="./media/welcome.png">
+</div>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## Overview 😀
 
-## Creating a project
+Juzi is a sentence parser designed to help you break down Chinese sentences into
+grammatical components. Each component in the syntax tree presents its own meaning in context to help you understand the overall meaning and structure of the sentence.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Once the parse tree is generated, you can move around with your arrow keys or click on individual nodes. Individual words will also display its dictionary entries as well as it's class in context.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+<div align="center">
+    <img src="./media/parse.png" width="80%" style="border-radius:20px">
+</div>
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Setup 💻
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+First you'll need to set up the following environment variables. The `KV_*` variables establish connection to the redis database as the dictionary serverless functions rely on Vercel KV. However, feel free to use your own Redis client.
 
 ```bash
-npm run build
+OPEN_API_KEY=""
+KV_URL=""
+KV_REST_API_URL=""
+KV_REST_API_TOKEN=""
+KV_REST_API_READ_ONLY_TOKEN=""
 ```
 
-You can preview the production build with `npm run preview`.
+Finally, run the dev server:
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+# Install dependencies
+yarn install
+
+# Run development server
+yarn dev
+```
