@@ -1,13 +1,13 @@
 <div align="center">
-    <h1 style="font-size: 80px;">juzi 
-        <img width=80 style="margin-bottom: -20px;" src="./static/juzi.png"/>
-    </h1>
-    <div style="font-size: 20px; margin-bottom: 20px;">
-	    <a href="#overview">Overview 😀</a>
-        <span> • </span>
-    	<a href="#setup">Setup 💻</a>
-    </div> 
-    <img style="border-radius:20px" src="./media/welcome.png">
+    <h1>juzi 🍊</h1>
+
+### [Overview 😀](#overview) • [Setup 💻](#setup)
+
+<img src="./media/welcome.png">
+</div>
+
+<div align="center">
+    
 </div>
 
 ## Overview 😀
@@ -18,7 +18,7 @@ grammatical components. Each component in the syntax tree presents its own meani
 Once the parse tree is generated, you can move around with your arrow keys or click on individual nodes. Individual words will also display its dictionary entries as well as it's class in context.
 
 <div align="center">
-    <img src="./media/parse.png" width="80%" style="border-radius:20px">
+    <img src="./media/parse.png" width="80%"">
 </div>
 
 ## Setup 💻
