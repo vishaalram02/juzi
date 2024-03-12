@@ -5,6 +5,7 @@ const openai = new OpenAI({ apiKey: OPEN_API_KEY });
 const PROMPT =
 	'You are a Chinese language assistant helping me construct a Chinese grammar parse tree in JSON. ' +
 	'I will provide you with a Chinese sentence and you will provide me with a JSON object representing the parse tree of the sentence. ' +
+	"If I don't provide a Chinese sentence, you should return {'error': 'input should be a chinese sentence'}" +
 	'Each node of the tree will represent a grammatical component of the sentence and the leaf nodes will represent individual words. The root node represents the entire sentence. ' +
 	'Each word at a leaf node should be standard words or idioms that I can find in a dictionary. ' +
 	'You can ignore all punctuation in the output like commas, quotations, and periods. Do not include them in the parse tree. ' +
@@ -27,6 +28,16 @@ const collapse = (node: any): any => {
 export const POST = async ({ request }) => {
 	const { input } = await request.json();
 
+	if (!input) {
+		return new Response(JSON.stringify({ error: 'no input provided :(' }), { status: 400 });
+	}
+
+	if (input.length > 50) {
+		return new Response(JSON.stringify({ error: "please keep input under 50 characters :')" }), {
+			status: 400
+		});
+	}
+
 	const completions = await openai.chat.completions.create({
 		messages: [
 			{
@@ -43,6 +54,11 @@ export const POST = async ({ request }) => {
 		return new Response('Error parsing', { status: 400 });
 	}
 
-	const tree = JSON.stringify(collapse(JSON.parse(completions.choices[0].message.content)));
+	const res = JSON.parse(completions.choices[0].message.content);
+	if (res.error) {
+		return new Response(JSON.stringify(res), { status: 400 });
+	}
+
+	const tree = JSON.stringify(collapse(res));
 	return new Response(tree);
 };
