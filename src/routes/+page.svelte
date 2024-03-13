@@ -56,7 +56,6 @@
 	let nodes: Node[] = [];
 	let selected = 0;
 	let hover = -1;
-	let hoverToken = -1;
 	let tokenNum = -1;
 	let definition = 0;
 	let example = 0;

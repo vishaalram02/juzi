@@ -15,7 +15,7 @@ interface Dict {
 export const POST = async ({ request }) => {
 	const { tokens } = await request.json();
 
-	let res: Dict = {};
+	const res: Dict = {};
 	if (!tokens) return new Response(JSON.stringify({ res: res }), { status: 400 });
 
 	for (let i = 0; i < tokens.length; i++) {
