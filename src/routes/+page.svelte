@@ -46,6 +46,7 @@
 	}
 
 	let showPinyin = true;
+	$: console.log(showPinyin);
 	let showInfo = false;
 	let inputValue = '';
 	let parse: any = {};
