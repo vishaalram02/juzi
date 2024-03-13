@@ -45,7 +45,7 @@
 		right: number;
 	}
 
-	let showPinyin = false;
+	let showPinyin = true;
 	let showInfo = false;
 	let inputValue = '';
 	let parse: any = {};
