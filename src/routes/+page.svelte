@@ -55,6 +55,8 @@
 	let levels: number[][] = [];
 	let nodes: Node[] = [];
 	let selected = 0;
+	let hover = -1;
+	let hoverToken = -1;
 	let tokenNum = -1;
 	let definition = 0;
 	let example = 0;
@@ -397,7 +399,9 @@
 									tabindex="0"
 									on:keydown={null}
 									on:click={() => (selected = token.nodeIndex)}
-									class="focus:outline-none p-2 m-2 rounded-lg {classColors[token.class]}"
+									class="{classColors[
+										token.class
+									]} hover:scale-110 transition-transform focus:outline-none p-2 m-2 rounded-lg"
 								>
 									<div class="text-sm md:text-lg whitespace-nowrap text-center">
 										{token.content}
@@ -410,13 +414,20 @@
 									role="button"
 									tabindex="0"
 									on:keydown={null}
+									on:focus={null}
 									on:click={() => (selected = level[tokenIdx])}
+									on:mouseover={() => (hover = level[tokenIdx])}
+									on:mouseleave={() => (hover = -1)}
 									class="focus:outline-none h-10 {getStyles(tokenIdx, levelIdx, true)}"
 								>
 									<div
-										class="{level[tokenIdx] == selected
-											? 'bg-orange-400'
-											: 'bg-orange-500'} h-full w-full {getStyles(tokenIdx, levelIdx, false)}"
+										class="{level[tokenIdx] == selected ? 'bg-orange-400' : 'bg-orange-500'} {level[
+											tokenIdx
+										] == hover && 'scale-110'} transition-transform h-full w-full {getStyles(
+											tokenIdx,
+											levelIdx,
+											false
+										)}"
 									/>
 								</div>
 							{/each}
