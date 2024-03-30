@@ -12,7 +12,7 @@
 		conjunction: 'bg-cyan-300',
 		quantifier: 'bg-lime-300',
 		particle: 'bg-yellow-300',
-		other: 'bg-gray-300'
+		punctuation: 'bg-gray-300'
 	};
 
 	enum Class {
@@ -25,7 +25,7 @@
 		Conjunction = 'conjunction',
 		Quantifier = 'quantifier',
 		Particle = 'particle',
-		Other = 'other'
+		Punctuation = 'punctuation'
 	}
 
 	interface Token {
@@ -294,9 +294,9 @@
 			<button on:click={submit} class="text-md md:text-2xl py-2 px-6 w-32">submit</button>
 		</div>
 		<div class="flex mt-2 items-center">
-			<button on:click={getExample} class="px-2 py-1">random</button>
+			<button on:click={getExample} class="px-2 py-1">random 🎲</button>
 			<button on:click={() => (showInfo = true)} class="px-2 py-1 ml-2 whitespace-nowrap"
-				>info ?</button
+				>info ❓</button
 			>
 
 			<input id="showPinyin" type="checkbox" class="scale-150 ml-4" bind:checked={showPinyin} />
@@ -383,7 +383,9 @@
 					{#each tokens as token, tokenIdx (token)}
 						<div class="flex flex-col">
 							{#if showPinyin}
-								<div class="text-center text-sm whitespace-nowrap">{token.pinyin}</div>
+								<div class="text-center text-sm whitespace-nowrap min-h-5">
+									{token.pinyin ? token.pinyin : ''}
+								</div>
 							{/if}
 							<div
 								class="mb-4
