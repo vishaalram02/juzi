@@ -1,8 +1,6 @@
 <div align="center">
     <h1>juzi 🍊</h1>
 
-### [Overview 😀](#overview) • [Setup 💻](#setup)
-
 <img src="./media/welcome.png">
 </div>
 
