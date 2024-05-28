@@ -12,7 +12,7 @@ grammatical components. Each component in the syntax tree presents its own meani
 Once the parse tree is generated, you can move around with your arrow keys or click on individual nodes. Individual words will also display its dictionary entries as well as it's class in context.
 
 <div align="center">
-    <img src="./media/parse.png" width="80%"">
+    <img src="./media/parse.png" width="80%">
 </div>
 
 ## Setup 💻
