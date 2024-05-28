@@ -4,10 +4,6 @@
 <img src="./media/welcome.png">
 </div>
 
-<div align="center">
-    
-</div>
-
 ## Overview 😀
 
 Juzi is a sentence parser designed to help you break down Chinese sentences into
