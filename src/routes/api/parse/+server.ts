@@ -13,7 +13,7 @@ const PROMPT =
 	"Every node that is not a leaf node will have a 'parse' field that contains a logical array of JSON objects representing largest grammatical subdivisions of the current component. " +
 	"The leaf nodes representing the indivdiual will not contain a parse field and will instead contain additional fields: a 'content' field with the original Chinese word from the sentence, a 'class' field containing the part of speech of the word in the original context of the chinese sentence, and a 'pinyin' field containing the pinyin pronounciation of the word with each syllable separated by a space. " +
 	'If the word is punctuation, the pinyin should just be the word itself. ' +
-	'The class field of each word should be one of the following: [noun, pronoun, verb, adjective, adverb, preposition, conjunction, quantifier, particle, punctuation]. ' +
+	'The class field of each word should be one of the following: [noun, pronoun, verb, adjective, adverb, preposition, conjunction, quantifier, particle]. ' +
 	'Make sure the nodes are processed in the same exact order as the words in the original sentence and that every node has a translation field, including the leaf nodes. ' +
 	'Do not skip or change the order of any words. Include every character in the parse tree. This is very important. ';
 
@@ -27,7 +27,8 @@ const collapse = (node: any): any => {
 };
 
 export const POST = async ({ request }) => {
-	const { input } = await request.json();
+	let { input } = await request.json();
+	input = input.replace(/[^\u4e00-\u9fa5]/g, '');
 
 	if (!input) {
 		return new Response(JSON.stringify({ error: 'no input provided :(' }), { status: 400 });

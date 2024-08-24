@@ -1,49 +1,7 @@
 <script lang="ts">
 	import examples from '../data/examples.json';
-	import Info from '../lib/components/info.svelte';
-
-	const classColors = {
-		noun: 'bg-blue-300',
-		pronoun: 'bg-purple-300',
-		verb: 'bg-red-400',
-		adjective: 'bg-green-300',
-		adverb: 'bg-indigo-300',
-		preposition: 'bg-pink-300',
-		conjunction: 'bg-cyan-300',
-		quantifier: 'bg-lime-300',
-		particle: 'bg-yellow-300',
-		punctuation: 'bg-gray-300'
-	};
-
-	enum Class {
-		Noun = 'noun',
-		Pronoun = 'pronoun',
-		Verb = 'verb',
-		Adjective = 'adjective',
-		Adverb = 'adverb',
-		Preposition = 'preposition',
-		Conjunction = 'conjunction',
-		Quantifier = 'quantifier',
-		Particle = 'particle',
-		Punctuation = 'punctuation'
-	}
-
-	interface Token {
-		content: string;
-		class: Class;
-		translation: string;
-		nodeIndex: number;
-		pinyin: string;
-	}
-
-	interface Node {
-		index: number;
-		translation: string;
-		content: string;
-		height: number;
-		left: number;
-		right: number;
-	}
+	import Info from '$lib/components/info.svelte';
+	import { classColors, type Token, type Node } from '$lib/types';
 
 	let showPinyin = true;
 	let showInfo = false;
